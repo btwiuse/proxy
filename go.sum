@@ -1,0 +1,6 @@
+github.com/btwiuse/connect v0.0.5 h1:8oAEdmduPfTIKvZIQXMikBOl9t0pEi4vy0HoKuLpRkg=
+github.com/btwiuse/connect v0.0.5/go.mod h1:aMInhQ7NA0kRmw3qibDR+Q9U7hN/fT1c8lJxfOQMKbc=
+github.com/btwiuse/dispatcher v0.0.0 h1:WT8ppOzcIX+PKZaI40ggBt3+QEg1Eo8zJUMJZbFuKHI=
+github.com/btwiuse/dispatcher v0.0.0/go.mod h1:UG1nEkZ0mVo/NsJBQZGCC7Tu503FKw6xRWwJoCv9XtY=
+github.com/btwiuse/forward v0.0.0 h1:L26Bpk6UohKdd8hW3+uyM+rLutEWup1e3yL4AKHi7u8=
+github.com/btwiuse/forward v0.0.0/go.mod h1:BS+ELsNGrzhIAPNwA1YV3PCLwgPYaUFUkJRICmOHyis=
