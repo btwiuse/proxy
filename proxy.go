@@ -48,10 +48,14 @@ func IsProxy(r *http.Request) bool {
 	return false
 }
 
+func IsProxyAuthenticated(r *http.Request) bool {
+	user, pass, ok := ProxyBasicAuth(r)
+	return ok && CheckProxyAuth(user, pass)
+}
+
 func ProxyAuthenticate(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		user, pass, ok := ProxyBasicAuth(r)
-		if !ok || !CheckProxyAuth(user, pass) {
+		if !IsProxyAuthenticated(r) {
 			w.Header().Set("Proxy-Authenticate", fmt.Sprintf(`Basic realm="%s"`, r.Host))
 			w.WriteHeader(http.StatusProxyAuthRequired)
 			return
