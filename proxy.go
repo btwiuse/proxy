@@ -42,7 +42,7 @@ func IsProxy(r *http.Request) bool {
 	if r.Header.Get("Proxy-Connection") != "" {
 		return true
 	}
-	if r.Method == http.MethodConnect {
+	if r.Method == http.MethodConnect && r.URL.Path == "" {
 		return true
 	}
 	return false
